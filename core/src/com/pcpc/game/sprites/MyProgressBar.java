@@ -2,6 +2,7 @@ package com.pcpc.game.sprites;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
+import com.pcpc.game.Constants;
 
 public class MyProgressBar {
 
@@ -16,7 +17,7 @@ public class MyProgressBar {
     public MyProgressBar(TextureRegion region, float time){
         bar = new Array<TextureRegion>();
         for (int i = 0; i < FRAME_COUNT; i++){
-            bar.add(new TextureRegion(region, 0, 0, region.getRegionWidth()*i/FRAME_COUNT, region.getRegionHeight()));
+            bar.add(new TextureRegion(region, 0, 0, Constants.PB_WIDTH*i/FRAME_COUNT, region.getRegionHeight()));
         }
         maxFrameTime = time / FRAME_COUNT;
         frame = 0;
